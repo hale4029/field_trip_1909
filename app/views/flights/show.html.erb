@@ -8,6 +8,12 @@
   Arrival City: <%= @flight.arrival_city %>
 </section>
 
+<h3>Age Profile</h3>
+<section>
+  Adults: <%= @flight.number_of_adults %>
+  Minors: <%= @flight.number_of_minors %>
+</section>
+
 <% @flight.passengers.each do |passenger| %>
     <li>Name: <%= passenger.name %></li>
 <% end %>
