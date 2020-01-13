@@ -8,7 +8,7 @@ RSpec.describe "Passenger Show Page" do
       southwest_1 = southwest.flights.create(number: "SW1", date: "10/10/20", time: "1300", departure_city: "Minneapolis", arrival_city: "Nashville")
       american_1 = american.flights.create(number: "AA1", date: "12/08/19", time: "0900", departure_city: "Baltimore", arrival_city: "Oakland")
       passenger_1 = southwest_1.passengers.create(name: "Harrison", age: 27)
-      passenger_1 << american_1
+      american_1.passengers << passenger_1
 
       visit "/passengers/#{passenger_1.id}"
 
