@@ -4,6 +4,13 @@
   Age: <%= @passenger.age %>
 </section>
 
+<h1>Add Flight:</h1>
+<%= form_tag passenger_flights_path(@passenger), method: :post do %>
+  <%= label_tag :number %>
+  <%= text_field_tag :number %>
+  <%= submit_tag "Submit" %>
+<% end %>
+
 <h1>Flights:</h1>
 <% @passenger.flights.each do |flight| %>
     <li><%= link_to "#{flight.number}", flight_path(flight) %></li>
