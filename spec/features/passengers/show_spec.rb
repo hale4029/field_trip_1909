@@ -17,6 +17,9 @@ RSpec.describe "Passenger Show Page" do
 
       expect(page).to have_content(american_1.number)
       expect(page).to have_content(southwest_1.number)
+
+      click_on(american_1.number)
+      expect(current_path).to eq(flight_path(american_1))
     end
   end
 end

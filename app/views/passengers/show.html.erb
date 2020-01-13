@@ -6,5 +6,5 @@
 
 <h1>Flights:</h1>
 <% @passenger.flights.each do |flight| %>
-    <li><%= flight.number %></li>
+    <li><%= link_to "#{flight.number}", flight_path(flight) %></li>
 <% end %>
