@@ -33,13 +33,13 @@ RSpec.describe "Flights Show Page" do
     end
 
     it "see flight adult and minor stats" do
-      @american_1.passengers.create(name: "Linda", age: 12)
-      @american_1.passengers.create(name: "Harry", age: 17)
-      @american_1.passengers.create(name: "Nic", age: 19)
+      @southwest_1.passengers.create(name: "Linda", age: 12)
+      @southwest_1.passengers.create(name: "Harry", age: 17)
+      @southwest_1.passengers.create(name: "Nic", age: 19)
 
       visit flight_path(@southwest_1)
 
-      expect(page).to have_content("Adults: 4")
+      expect(page).to have_content("Adults: 3")
       expect(page).to have_content("Minors: 2")
     end
   end
