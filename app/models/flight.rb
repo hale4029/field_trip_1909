@@ -8,4 +8,12 @@ class Flight <ApplicationRecord
   def self.look_up_flight(number)
     where(number: number).first
   end
+
+  def number_of_adults
+    self.passengers.where('age > 17').count
+  end
+
+  def number_of_minors
+    self.passengers.where('age < 18').count
+  end
 end
