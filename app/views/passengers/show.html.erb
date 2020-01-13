@@ -1,0 +1,10 @@
+<h1>Passenger Information</h1>
+<section>
+  Name: <%= @passenger.name %>
+  Age: <%= @passenger.age %>
+</section>
+
+<h1>Flights:</h1>
+<% @passenger.flights.each do |flight| %>
+    <li><%= flight.number %></li>
+<% end %>
