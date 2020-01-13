@@ -24,6 +24,7 @@ RSpec.describe "Flights Show Page" do
 
       visit "/flights/#{southwest_1.id}"
 
+      expect(page).to have_content(southwest_1.airline.name)
       expect(page).to have_content(southwest_1.number)
       expect(page).to have_content(southwest_1.date)
       expect(page).to have_content(southwest_1.time)
