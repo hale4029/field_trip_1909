@@ -5,6 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+FlightPassenger.destroy_all
+Flight.destroy_all
+Airline.destroy_all
+Passenger.destroy_all
+
 
 southwest = Airline.create(name: "Southwest")
 american = Airline.create(name: "American")
